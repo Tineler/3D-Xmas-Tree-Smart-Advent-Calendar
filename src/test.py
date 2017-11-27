@@ -24,7 +24,7 @@ def main():
     date = date + delta
     print("-----Testing 1.1. All lights should be off-----")
     tree.tick(date)
-    input("-----Testing done!-----")
+    print("-----Testing done!-----")
 
 
 if __name__ == '__main__':
