@@ -8,7 +8,7 @@ def main():
     tree = Tree()
     tree.reset()
     while True:
-        tree.handle_date(datetime.date.today())
+        tree.tick(datetime.date.today())
         time.sleep(3600)
 
 

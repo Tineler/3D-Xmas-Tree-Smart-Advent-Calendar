@@ -18,7 +18,12 @@ class Tree:
             led.source_delay = 0.1
             led.source = random_values()
 
-    def handle_date(self, date):
+    def light_leds(self, date):
+        for index in range(0, date.day):
+            print("turn on LED %d" % index)
+            self.leds[index].on()
+
+    def tick(self, date):
         if not is_december(date):
             print("reset LEDs, because advent season is over")
             self.reset()
@@ -26,6 +31,5 @@ class Tree:
             print("It's christmas time!!")
             self.party_mode()
         else:
-            for index in range(0,date.day):
-                print("turn on LED %d" % index)
-                self.leds[index].on()
+            print("Light appropriate LEDs")
+            self.light_leds(date)
