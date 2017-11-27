@@ -5,7 +5,7 @@ import datetime
 
 def main():
     tree = Tree()
-    delta = datetime.timedelta(days=-1)
+    delta = datetime.timedelta(days=1)
 
     date = datetime.date(2017, 11, 30)
     print("-----Testing 30.11. All lights should be off-----")
