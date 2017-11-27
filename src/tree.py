@@ -1,7 +1,7 @@
 from gpiozero import LEDBoard
 from gpiozero.tools import random_values
 
-from helper import is_december, is_christmas
+from helper import is_december, is_between_christmas_eve_and_new_year
 
 
 class Tree:
@@ -22,7 +22,7 @@ class Tree:
         if not is_december(date):
             print("reset LEDs, because advent season is over")
             self.reset()
-        elif is_christmas(date):
+        elif is_between_christmas_eve_and_new_year(date):
             print("It's christmas time!!")
             self.party_mode()
         else:
