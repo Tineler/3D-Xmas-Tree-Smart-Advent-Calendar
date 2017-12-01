@@ -6,7 +6,8 @@ from helper import is_december, is_between_christmas_eve_and_new_year
 
 class Tree:
     def __init__(self):
-        self.leds = LEDBoard(*range(2,28),pwm=True)
+        self.leds = LEDBoard(4, 15, 13, 21, 22, 6, 12, 25, 16, 17, 27, 26, 9, 23, 11, 5, 20, 19, 14, 18, 7, 8, 10, 24, 2,
+                             pwm=True)
 
     def reset(self):
         print("turn all leds off")
